@@ -17,8 +17,8 @@ export class AppComponent implements OnInit {
 
   // Developer information
   developer: Developer = {
-    name: 'Adarsh Pandey',
-    githubUrl: 'https://github.com/codeswithadarsh',
+    name: 'Aryan Mahajan',
+    githubUrl: 'https://github.com/Aryan-2004-11',
   };
 
   // EventEmitter for notifying theme changes to parent components
