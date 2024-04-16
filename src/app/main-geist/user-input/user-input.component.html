@@ -1,0 +1,90 @@
+
+<h3
+  class="font-semibold text-3xl pt-10 lg:pt-20 md:pt-20 pl-0 lg:pl-8 md:pl-8 pr-0 mb-4"
+>
+  Finds the <span class="coders" style="background-color: #2ca043; border-radius: 8px; width: 110px; display: inline-block;">  Coders  </span> now...
+</h3>
+
+<!-- Input Form -->
+<form class="flex pl-0 lg:pl-8 md:pl-8 items-center lg:space-x-2 pt-3">
+ 
+  <input
+    class="text-txt-dark myinput font-semibold border rounded-lg px-4 w-full lg:w-3/4 py-2 md:w-full lg:py-3 focus:outline-none focus:border-cyan"
+    [class]="
+      appTheme === 'light'
+        ? 'bg-back-light border-edge-light text-txt-light'
+        : 'bg-back-dark border-edge-dark text-txt-dark'
+    "
+    type="text"
+    placeholder="Enter GitHub Username"
+    name="username"
+    [(ngModel)]="username"
+  />
+  <!-- Search Button -->
+  <button
+    class="border mybtn border-edge-dark mt-0 font-semibold px-4 py-2 ml-2 rounded-lg lg:ml-10"
+    [class]="
+      appTheme === 'light'
+        ? 'bg-back-dark border-edge-dark text-txt-dark'
+        : 'bg-back-light border-edge-light text-txt-light'
+    "
+    type="button"
+    (click)="emitSearchResult()"
+  >
+    Search
+  </button>
+</form>
+
+<style>
+.notice-board-container {
+  margin-top: 30px;
+  border: 2px solid #333;
+  background-color: #01040a; 
+  padding: 20px;
+  border-radius: 10px;
+  width: 850px;
+  color: white;
+}
+
+.notice-board-container.light-mode {
+  background-color: #f5f5f5; 
+  color: #333; 
+}
+
+.notice-board-container h2 {
+  margin-bottom: 10px;
+}
+
+.notice {
+  margin-bottom: 10px;
+}
+
+.notice p {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .notice-board-container {
+    display: none;
+  }
+}
+
+
+</style>
+
+<div class="notice-board-container">
+  <h2>📈 Trending repositories
+  </h2>
+  <div class="notice">
+    <p style="font-size: 22px;">•🧑‍💻<span style="font-style: italic; font-size: 14px;">github.com/codeswithadarsh</span></p>
+    <p style="font-size: 15px; font-weight: 300;">Benchmarking JS web framework SSR performance. Benchmarking JS web framework SSR performance
+    </p>
+  </div>
+
+  <div class="notice">
+    <p style="font-size: 20px;">•🧑<span style="font-style: italic; font-size: 14px;">github.com/
+      anonymous</span></p>
+    <p style="font-size: 15px; font-weight: 300;">independent research lab exploring new mediums of thought and expanding the imaginative powers.
+    </p>
+  </div>
+  
+</div>

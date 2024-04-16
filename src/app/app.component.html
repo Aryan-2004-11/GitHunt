@@ -1,0 +1,24 @@
+<!--=======================================================================
+                          Header Component
+======================================================================= -->
+<app-header
+  [appTitle]="appTitle"
+  [appTheme]="appTheme"
+  (themeToggled)="toggleTheme()"
+></app-header>
+
+<!--=======================================================================
+                          Main Geist Component
+              @brief: Contains Hero Section and Search Results
+======================================================================= -->
+<app-main-geist [appTitle]="appTitle" [appTheme]="appTheme"></app-main-geist>
+
+<!--=======================================================================
+                          Footer Component
+======================================================================= -->
+<app-footer
+  [appTitle]="appTitle"
+  [appTheme]="appTheme"
+  [currentYear]="currentYear"
+  [developer]="developer"
+></app-footer>
